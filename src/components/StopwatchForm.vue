@@ -88,4 +88,22 @@ input[type="submit"]:hover {
   background: white;
   color: #63b4b8;
 }
+
+#removeAll_btn{
+  font-size: 11px;
+  background-color: #d9534f;
+  padding: 16px 20px;
+  padding-left: -50px;
+  text-decoration: none;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 24px;
+  border: 4px solid white;
+  transition: 0.5s;
+}
+
+#removeAll_btn:hover{
+  background: white;
+  color: #d9534f;
+}
 </style>

@@ -1,17 +1,20 @@
 <template>
   <Navbar />
   <StopwatchForm />
+  <Footer/>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import StopwatchForm from "./components/StopwatchForm.vue";
+import Footer from "./components/Footer.vue"
 
 export default {
   name: "App",
   components: {
     Navbar,
     StopwatchForm,
+    Footer,
   },
 };
 </script>
@@ -27,5 +30,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-right: auto;
+  margin-left: auto;
 }
 </style>
