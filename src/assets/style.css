@@ -85,8 +85,8 @@ button[type="button"]:hover {
   margin-right: 6px;
   position: relative;
   min-height: 1px;
-  padding-right: 17px;
-  padding-left: 17px;
+  padding-right: 18px;
+  padding-left: 18px;
   width: 45%;
   float: left;
   /* background-color: crimson; */
@@ -141,7 +141,7 @@ button[type="button"]:hover {
 
 .stopwatch-footer {
     float: left;
-    /* background-color: brown; */
+    width: 100%;
     border-top: 1px solid #ddd;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -154,7 +154,7 @@ button[type="button"]:hover {
 #start_btn {
     float: left;
     background: #444444;
-    width: 161px;
+    width: 33%;
 }
 
 #pause_btn:hover{
@@ -165,7 +165,7 @@ button[type="button"]:hover {
 #pause_btn {
     float: left;
     background: #444444;
-    width: 161px;
+    width: 34%;
      /* display: none; */  
 }
 
@@ -177,7 +177,7 @@ button[type="button"]:hover {
 #restart_btn {
     float: left;
     background: #444444;
-    width: 161px;
+    width: 33%;
     /* display: none; */
 }
 
