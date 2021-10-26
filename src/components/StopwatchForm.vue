@@ -1,5 +1,5 @@
 <template>
-<button id="button-add" type="button" class="tech-font">ADD STOPWATCH</button>
+<button id="button-add" type="button" class="tech-font">ADD NEW STOPWATCH</button>
 </template>
 
 <script>
@@ -9,4 +9,5 @@ export default {
 </script>
 
 <style>
+
 </style>

@@ -54,27 +54,39 @@ button[type="button"] {
 }
 
 button[type="button"]:hover {
-  color:#DA0037;
-  background: white;
+  background-color: #DA0037;
+  color: white;
 }
+
+/* css add title
+/* #enter {
+  width: 900px;
+  height: 40px;
+  border-radius: 25px;
+  background: #444444;
+  color: #ffffff;
+  margin: 5px;
+  font-size: 15px;
+} */
 
 #button-add {
   font-size: 15px;
-  background: linear-gradient(90deg, #159957, #155799);
+  background: #DA0037;
   margin: 0 auto;
   text-align: center;
+  color: #FFFFFF;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .stopwatch-body {
-  border : 3px solid white;
+  border : 3px solid #DA0037;
   border-radius: 24px;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin: 20px;
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  width: 444px;
+  width: 460px;
   float: left;
   /* background-color: crimson; */
 
@@ -133,23 +145,37 @@ button[type="button"]:hover {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
+#start_btn:hover{
+  background-color: #DA0037;
+  color: white;
+}
 
 #start_btn {
     float: left;
-    background: #5CDB95;
+    background: #444444;
     width: 147px;
 }
-  
+
+#pause_btn:hover{
+  background-color: #DA0037;
+  color: white;
+}
+
 #pause_btn {
     float: left;
-    background: orange;
+    background: #444444;
     width: 147px;
      /* display: none; */  
 }
-  
+
+#restart_btn:hover{
+  background-color: #DA0037;
+  color: white;
+}
+
 #restart_btn {
     float: left;
-    background: #63B4B8;
+    background: #444444;
     width: 147px;
     /* display: none; */
 }
