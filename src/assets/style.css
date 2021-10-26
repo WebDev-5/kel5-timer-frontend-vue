@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #63b4b8;
+  background-color: #121212;
   margin: 0;
   box-sizing: border-box;
   color: white;
@@ -21,92 +22,44 @@ body {
   font-family: "Baloo Chettan 2", cursive;
 }
 
+.tech-font {
+  font-family: 'Share Tech Mono', sans-serif;
+}
+
+.zen-font {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
+  font-weight:normal
 }
 
 .text-center {
   text-align: center;
 }
 
-#removeAll_btn {
-  font-size: 11px;
-  background-color: #d9534f;
-  padding: 16px 20px;
-  padding-left: -50px;
-  text-decoration: none;
-  margin: 8px 0;
-  cursor: pointer;
-  border-radius: 24px;
-  border: 4px solid white;
-  transition: 0.5s;
-}
-
-input[type="text"] {
-  width: 50%;
+button[type="button"] {
+  color: white;
   padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 24px;
+  padding-left: -50px;
+  cursor: pointer;
+  border-radius: 20px;
   border: none;
-  outline: none;
-  color: white;
-  border: 4px solid white;
-  background: none;
+  font-size: 15px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(90deg, #159957, #155799);
   transition: 0.5s;
 }
 
-input[type="text"]::placeholder {
-  color: white;
-}
-
-input[type="text"]:focus {
-  border: 4px solid rgb(34, 118, 202);
+button[type="button"]:hover {
+  color:#155799;
   background: white;
-  color: black;
-}
-
-input[type="text"]:focus::placeholder {
-  color: black;
-}
-
-input[type="submit"] {
-  color: white;
-  padding: 12px 20px;
-  padding-left: -50px;
-  text-decoration: none;
-  margin: 8px 0;
-  cursor: pointer;
-  border-radius: 24px;
-  border: 4px solid white;
-  background: none;
-  transition: 0.5s;
-}
-
-input[type="submit"]:hover {
-  background: white;
-  color: #63b4b8;
-}
-
-#removeAll_btn{
-  font-size: 11px;
-  background-color: #d9534f;
-  color: white;
-  padding: 16px 20px;
-  padding-left: -50px;
-  text-decoration: none;
-  margin: 8px 0;
-  cursor: pointer;
-  border-radius: 24px;
-  border: 4px solid white;
-  transition: 0.5s;
-}
-
-#removeAll_btn:hover{
-  background: white;
-  color: #d9534f;
 }
 
 .footer2{
@@ -124,7 +77,6 @@ input[type="submit"]:hover {
   padding: 20px;
   border-top: 1px solid #ddd;
   text-align: center;
-  font-family: 'Baloo Chettan 2';
   color: white;
   font-size: 17px;
   margin-top: 40px;

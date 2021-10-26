@@ -1,6 +1,6 @@
 <template>
     <div class='footer2'>
-        <div class='license'>
+        <div class='license zen-font'>
             <p>Copyrights © 2021 Webdev5 - All Right Reserved</p>
         </div>
   </div>
@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style>
-  @import '../assets/style.css';
+
 </style>

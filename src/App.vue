@@ -38,7 +38,7 @@ export default {
       {
         id: 2,
         isRunning: 0,
-        title: "Untitled",
+        title: "Untitled 2",
         startTime: 0,
         timeDelays: 0,
         pauseTime: 0,
@@ -47,7 +47,7 @@ export default {
       {
         id: 3,
         isRunning: 0,
-        title: "Untitled",
+        title: "Untitled 3",
         startTime: 1635220389362,
         timeDelays: 6074,
         pauseTime: 1635220400981,
@@ -56,7 +56,7 @@ export default {
       {
         id: 4,
         isRunning: 0,
-        title: "Untitled",
+        title: "Untitled 4",
         startTime: 1635220392489,
         timeDelays: 0,
         pauseTime: 1635220395601,
@@ -77,16 +77,4 @@ export default {
 </script>
 
 <style>
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background-color: #121212; */
-  margin: 0;
-  color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding-right: 10%;
-  padding-left: 10%;
-  margin-right: auto;
-  margin-left: auto;
-}
 </style>

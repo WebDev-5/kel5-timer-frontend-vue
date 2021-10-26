@@ -1,5 +1,5 @@
 <template>
-<button type="button">Add Stopwatch</button>
+<button type="button" class="tech-font">ADD STOPWATCH</button>
 </template>
 
 <script>
