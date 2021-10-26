@@ -1,20 +1,77 @@
 <template>
   <Navbar />
   <StopwatchForm />
-  <Footer/>
+  <Stopwatches :stopwatches="stopwatches"/>
+  <Footer />
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import StopwatchForm from "./components/StopwatchForm.vue";
-import Footer from "./components/Footer.vue"
+import Stopwatches from "./components/Stopwatches.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
     StopwatchForm,
+    Stopwatches,
     Footer,
+  },
+  data() {
+    return {
+      stopwatches: [],
+    };
+  },
+  created() {
+    this.stopwatches = [
+      {
+        id: 1,
+        isRunning: 0,
+        title: "Faza",
+        startTime: 1635220395601,
+        timeDelays: 0,
+        pauseTime: 1635220398563,
+        continueTime: 0,
+      },
+      {
+        id: 2,
+        isRunning: 0,
+        title: "Untitled",
+        startTime: 0,
+        timeDelays: 0,
+        pauseTime: 0,
+        continueTime: 0,
+      },
+      {
+        id: 3,
+        isRunning: 0,
+        title: "Untitled",
+        startTime: 1635220389362,
+        timeDelays: 6074,
+        pauseTime: 1635220400981,
+        continueTime: 1635220398563,
+      },
+      {
+        id: 4,
+        isRunning: 0,
+        title: "Untitled",
+        startTime: 1635220392489,
+        timeDelays: 0,
+        pauseTime: 1635220395601,
+        continueTime: 0,
+      },
+      {
+        id: 5,
+        isRunning: 0,
+        title: "Untitled 5",
+        startTime: 1635220392489,
+        timeDelays: 0,
+        pauseTime: 1635220395601,
+        continueTime: 0,
+      },
+    ];
   },
 };
 </script>
@@ -23,13 +80,10 @@ export default {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #63b4b8;
+  background-color: #121212;
   margin: 0;
-  box-sizing: border-box;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
   padding-right: 10%;
   padding-left: 10%;
   margin-right: auto;
