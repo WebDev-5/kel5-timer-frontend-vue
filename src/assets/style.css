@@ -68,26 +68,82 @@ button[type="button"]:hover {
 .stopwatch-body {
   border : 3px solid white;
   border-radius: 24px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  width: 550px;
+  width: 444px;
   float: left;
+
 }
 
 .stopwatch-header {
-  padding: 10px 15px;
+  /* padding: 10px 15px; */
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  /* background-color: #159957; */
+  height: 30px;
+}
+
+#title {
+    /* background-color: aqua; */
+    float: left;
+    width: 60%;
+    color: white;
+}
+
+#remove {
+    /* background-color: aqua; */
+    margin-top: 10px;
+    float: right;
+    /* width: 40%; */
+    /* color: white; */
+}
+
+.stopwatch-time {
+    /* background-color: #155799; */
+    /* padding: 15px; */
+}
+
+.jam {
+    margin-left: -40px;
+    /* background-color: chartreuse; */
+    /* color: white; */
+    /* text-align: center; */
+    /* font-family: 'Allerta Stencil';
+    font-weight: lighter; */
+    /* font-size: 40px; */
+    /* text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    margin-top: -10px; */
+    /* margin-bottom: -10px; */
 }
 
 .stopwatch-footer {
-  border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+    float: left;
+    /* background-color: brown; */
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#start_btn {
+    background: #5CDB95;
+    width: 160px;
+}
+  
+#pause_btn {
+    background: orange;
+    width: 160px;
+     /* display: none; */  
+}
+  
+#restart_btn {
+    background: #63B4B8;
+    width: 160px;
+    /* display: none; */
 }
 
 .footer2{
