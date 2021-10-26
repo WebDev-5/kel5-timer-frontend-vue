@@ -1,5 +1,5 @@
 <template>
-  <h1 class="page-header text-center zen-font">MULTIPLE STOPWATCH</h1>
+  <h1 class="page-header text-center">MULTIPLE STOPWATCH</h1>
 </template>
 
 <script>
