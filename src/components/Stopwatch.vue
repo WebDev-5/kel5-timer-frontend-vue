@@ -7,14 +7,14 @@
     <br />
     <br />
     <h1 class="jam">{{ clock.jam }}</h1>
-    <h3 class="total_jam">Total: 0 Hours 0 Minutes 0 Seconds</h3>
+    <h3 class="total_jam">{{ clock.last }}</h3>
     <!-- <div class="stopwatch-time">
             <h1 id="jam">00:00:00</h1>
         </div> -->
     <div class="stopwatch-footer">
       <button id="the_btn" type="button" v-on:click="start()">Start</button>
-      <button id="the_btn" type="button" v-on:click="reset()">Reset</button>
       <button id="the_btn" type="button" v-on:click="stop()">Stop</button>
+      <button id="the_btn" type="button" v-on:click="reset()">Reset</button>
     </div>
   </div>
 </template>
@@ -31,6 +31,7 @@ export default {
         started: false,
         running: false,
         jam: "00:00:00.000",
+        last: "Total: 00 Hours 00 Minutes 00 Seconds",
       },
     };
   },
@@ -57,11 +58,34 @@ export default {
     },
     reset() {
       this.clock.running = false;
+      this.last();
       clearInterval(this.clock.started);
       this.clock.stoppedDuration = 0;
       this.clock.timeBegan = null;
       this.clock.timeStopped = null;
       this.clock.jam = "00:00:00.000";
+    },
+    last() {
+        if (this.clock.timeBegan === null) {
+            this.clock.last = "Total: 00 Hours 00 Minutes 00 Seconds";
+            return;
+        }
+      var currentTime = new Date(),
+        timeElapsed = new Date(
+          currentTime - this.clock.timeBegan - this.clock.stoppedDuration
+        ),
+        hour = timeElapsed.getUTCHours(),
+        min = timeElapsed.getUTCMinutes(),
+        sec = timeElapsed.getUTCSeconds();
+        console.log(currentTime.getUTCHours());
+        console.log(hour);
+      this.clock.last = "Total: "+
+        this.zeroPrefix(hour, 2) +
+        " Hours " +
+        this.zeroPrefix(min, 2) +
+        " Minutes " +
+        this.zeroPrefix(sec, 2) +
+        " Seconds";
     },
     clockRunning() {
       var currentTime = new Date(),
@@ -72,7 +96,6 @@ export default {
         min = timeElapsed.getUTCMinutes(),
         sec = timeElapsed.getUTCSeconds(),
         ms = timeElapsed.getUTCMilliseconds();
-      console.log(this.clock.stoppedDuration);
       this.clock.jam =
         this.zeroPrefix(hour, 2) +
         ":" +
@@ -90,11 +113,11 @@ export default {
       return (zero + num).slice(-digit);
     },
   },
-  created(){
-      localStorage.setItem('stopwatch', JSON.stringify(this.clock));
+  created() {
+    localStorage.setItem("stopwatch", JSON.stringify(this.clock));
   },
-  mounted(){
-      this.clock = JSON.parse(localStorage.getItem('stopwatch'));
+  mounted() {
+    this.clock = JSON.parse(localStorage.getItem("stopwatch"));
   },
 };
 </script>
