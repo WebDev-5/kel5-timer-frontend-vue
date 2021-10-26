@@ -76,6 +76,7 @@ button[type="button"]:hover {
   padding-left: 15px;
   width: 444px;
   float: left;
+  /* background-color: crimson; */
 
 }
 
@@ -84,14 +85,13 @@ button[type="button"]:hover {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  /* background-color: #159957; */
   height: 30px;
 }
 
 #title {
     /* background-color: aqua; */
     float: left;
-    width: 60%;
+    width: 40%;
     color: white;
 }
 
@@ -104,7 +104,8 @@ button[type="button"]:hover {
 }
 
 .stopwatch-time {
-    /* background-color: #155799; */
+    background-color: #155799;
+    height: 30px;
     /* padding: 15px; */
 }
 
@@ -130,19 +131,22 @@ button[type="button"]:hover {
 }
 
 #start_btn {
+    float: left;
     background: #5CDB95;
-    width: 160px;
+    width: 147px;
 }
   
 #pause_btn {
+    float: left;
     background: orange;
-    width: 160px;
+    width: 147px;
      /* display: none; */  
 }
   
 #restart_btn {
+    float: left;
     background: #63B4B8;
-    width: 160px;
+    width: 147px;
     /* display: none; */
 }
 

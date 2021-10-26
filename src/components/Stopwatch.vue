@@ -4,14 +4,15 @@
             <h3 id="title">{{stopwatch.title }}</h3>
             <button id="remove" type="button">X</button>
         </div>
+
         <h1 class="jam">00:00:00</h1>
         <!-- <div class="stopwatch-time">
-            
+            <h1 id="jam">00:00:00</h1>
         </div> -->
         <div class="stopwatch-footer">
             <button id="start_btn" type="button">Start</button>
-            <!-- <button id="pause_btn" type="button">Reset</button> -->
-            <!-- <button id="restart_btn" type="button">Stop</button> -->
+            <button id="pause_btn" type="button">Reset</button>
+            <button id="restart_btn" type="button">Stop</button>
         </div>
     </div>
 </template>
