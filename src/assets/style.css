@@ -85,13 +85,13 @@ button[type="button"]:hover {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  height: 30px;
+  height: 16px;
 }
 
 #title {
     /* background-color: aqua; */
     float: left;
-    width: 40%;
+    width: 100px;
     color: white;
 }
 
@@ -110,16 +110,20 @@ button[type="button"]:hover {
 }
 
 .jam {
-    margin-left: -40px;
+    /* margin-left: -40px; */
     /* background-color: chartreuse; */
     /* color: white; */
-    /* text-align: center; */
+    text-align: center;
     /* font-family: 'Allerta Stencil';
     font-weight: lighter; */
     /* font-size: 40px; */
     /* text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     margin-top: -10px; */
     /* margin-bottom: -10px; */
+}
+
+.total_jam {
+    text-align: center;
 }
 
 .stopwatch-footer {

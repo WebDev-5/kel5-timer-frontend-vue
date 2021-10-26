@@ -4,8 +4,9 @@
             <h3 id="title">{{stopwatch.title }}</h3>
             <button id="remove" type="button">X</button>
         </div>
-
+        <br>
         <h1 class="jam">00:00:00</h1>
+        <h3 class="total_jam">Total: 0 Hours 0 Minutes 0 Seconds</h3>
         <!-- <div class="stopwatch-time">
             <h1 id="jam">00:00:00</h1>
         </div> -->
