@@ -82,11 +82,12 @@ button[type="button"]:hover {
   border : 3px solid #DA0037;
   border-radius: 24px;
   margin: 5px;
+  margin-right: 6px;
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 444px;
+  padding-right: 17px;
+  padding-left: 17px;
+  width: 45%;
   float: left;
   /* background-color: crimson; */
 
@@ -153,7 +154,7 @@ button[type="button"]:hover {
 #start_btn {
     float: left;
     background: #444444;
-    width: 147px;
+    width: 161px;
 }
 
 #pause_btn:hover{
@@ -164,7 +165,7 @@ button[type="button"]:hover {
 #pause_btn {
     float: left;
     background: #444444;
-    width: 147px;
+    width: 161px;
      /* display: none; */  
 }
 
@@ -176,7 +177,7 @@ button[type="button"]:hover {
 #restart_btn {
     float: left;
     background: #444444;
-    width: 147px;
+    width: 161px;
     /* display: none; */
 }
 
