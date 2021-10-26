@@ -80,7 +80,7 @@ export default {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #121212;
+  /* background-color: #121212; */
   margin: 0;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
