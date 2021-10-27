@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/WebDev-5/kel5-timer-jQuery">
+  <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue">
     <img src="./src/assets/icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,14 +34,14 @@
   <p align="center">
     An awesome Stopwatch to manage your time!
     <br />
-    <a href="https://github.com/WebDev-5/kel5-timer-jQuery"><strong>Open Application »</strong></a>
+    <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue"><strong>Open Application »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/WebDev-5/kel5-timer-jQuery">View Demo</a>
+    <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue">View Demo</a>
     ·
-    <a href="https://github.com/WebDev-5/kel5-timer-jQuery/issues">Report Bug</a>
+    <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue/issues">Report Bug</a>
     ·
-    <a href="https://github.com/WebDev-5/kel5-timer-jQuery/issues">Request Feature</a>
+    <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue/issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,7 +77,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/WebDev-5/kel5-timer-jQuery)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 Multi Stopwatch is an application that was built to fulfill a mini project assignment for Web Development course, which was developed by Webdev Kelompok 5 D4 2019 Politeknik Negeri Bandung.
 This an application that is a simulation of a stopwatch or timer, which can be used to calculate and set the time for each activity you do. This application is built using HTML, CSS, Node.js, express.js, Sequelize, Axios, and PostgreSQL. 
@@ -160,7 +160,7 @@ To use this application, you can :
 
 For example :
 
-[![Watch the video](./src/assets/demo.gif)](https://github.com/WebDev-5/kel5-timer-jQuery)
+[![Watch the video](./src/assets/demo.gif)](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -182,7 +182,7 @@ For example :
 - [x] Connect backend to frontend with Axios.  
 - [x] Fix connection between frontend and backend. 
 
-See the [open issues](https://github.com/WebDev-5/kel5-timer-jQuery/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/WebDev-5/kel5-timer-frontend-vue/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -209,7 +209,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [LICENSE.md](https://github.com/WebDev-5/kel5-timer-jQuery/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE.md](https://github.com/WebDev-5/kel5-timer-frontend-vue/blob/main/LICENSE.md) for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -225,7 +225,7 @@ Distributed under the MIT License. See [LICENSE.md](https://github.com/WebDev-5/
 * [Nabil Putra Hadiyani](https://github.com/nabilputrah)
 * [Shinta Nurkaafi](https://github.com/NurMeiTaa)
 
-Project Link: [Multiple Stopwatch Kelompok 5](https://github.com/WebDev-5/kel5-timer-jQuery)
+Project Link: [Multiple Stopwatch Kelompok 5](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -248,13 +248,13 @@ We've included a few of our favorites to kick things off!
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/CONTRIBUTORS-6-blue?style=for-the-badge&logo=appveyor
-[contributors-url]: https://github.com/WebDev-5/kel5-timer-jQuery/graphs/contributors
+[contributors-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
-[forks-url]: https://github.com/WebDev-5/kel5-timer-jQuery/network/members
+[forks-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/network/members
 [stars-shield]: https://img.shields.io/github/stars/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
-[stars-url]: https://github.com/WebDev-5/kel5-timer-jQuery/stargazers
+[stars-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/stargazers
 [issues-shield]: https://img.shields.io/github/issues/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
-[issues-url]: https://github.com/WebDev-5/kel5-timer-jQuery/issues
+[issues-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/issues
 [license-shield]: https://img.shields.io/github/license/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
-[license-url]: https://github.com/WebDev-5/kel5-timer-jQuery/blob/main/LICENSE.md
+[license-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/blob/main/LICENSE.md
 [product-screenshot]: ./src/assets/screenshot.png
