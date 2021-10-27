@@ -118,29 +118,30 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Install `vue-cli` globally
+1. Install [kel5-timer-backend-nodeJS]
+2. Install `vue-cli` globally
    ```sh
    npm install vue-cli -g
    ```
-2. Clone the repository
+3. Clone the repository
    ```sh
    git clone https://github.com/WebDev-5/kel5-timer-frontend-vue
    ```
-3. Create a new database 'timer' in Postgre with `webdev-5` as `db_user` and `db_password`.
-3. Open terminal and change directory to root folder
+4. Create a new database 'timer' in Postgre with `webdev-5` as `db_user` and `db_password`.
+5. Open terminal and change directory to root folder
    ```sh
    cd kel5-timer-frontend-vue
    ```
-4. Install the dependencies.
+6. Install the dependencies.
    ```sh
    npm install
    ```
-5. Run server 
+7. Run server 
    ```sh
    npm run serve
    ```
-6. Go to the link where the app is running e.g. `http://localhost:8080/`.
-7. Run application.
+8. Go to the link where the app is running e.g. `http://localhost:8080/`.
+9. Run application.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -258,3 +259,4 @@ We've included a few of our favorites to kick things off!
 [license-shield]: https://img.shields.io/github/license/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
 [license-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/blob/main/LICENSE.md
 [product-screenshot]: src/assets/images/screenshot.png
+[kel5-timer-backend-nodeJS]: https://github.com/WebDev-5/kel5-timer-backend-nodeJS
