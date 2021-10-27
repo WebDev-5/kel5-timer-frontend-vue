@@ -61,8 +61,8 @@ export default {
       clearInterval(this.clock.started);
     },
     reset() {
-      this.clock.running = false;
       this.last();
+      this.clock.running = false;
       clearInterval(this.clock.started);
       this.clock.stoppedDuration = 0;
       this.clock.timeBegan = null;
@@ -75,11 +75,11 @@ export default {
         return;
       }
       this.clock.timeBegan = new Date(this.clock.timeBegan);
-      var currentTime=new Date();
-      if (this.clock.timeStopped === null) {
+      var currentTime = new Date();
+      if (this.clock.running) {
         currentTime = new Date();
       } else {
-        currentTime = this.clock.timeStopped;
+        currentTime = new Date(this.clock.timeStopped);
       }
       var timeElapsed = new Date(
           currentTime - this.clock.timeBegan - this.clock.stoppedDuration
@@ -87,14 +87,13 @@ export default {
         hour = timeElapsed.getUTCHours(),
         min = timeElapsed.getUTCMinutes(),
         sec = timeElapsed.getUTCSeconds();
-      this.clock.last =
-        "Total: " +
+      this.clock.last = "Total: "+
         this.zeroPrefix(hour, 2) +
         " Hours " +
         this.zeroPrefix(min, 2) +
         " Minutes " +
         this.zeroPrefix(sec, 2) +
-        " Seconds";
+        " Seconds ";
     },
     clockRunning() {
       this.clock.timeBegan = new Date(this.clock.timeBegan);
@@ -114,6 +113,15 @@ export default {
         this.zeroPrefix(sec, 2) +
         "." +
         this.zeroPrefix(ms, 3);
+      return (
+        "Total: " +
+        this.zeroPrefix(hour, 2) +
+        " Hours " +
+        this.zeroPrefix(min, 2) +
+        " Minutes " +
+        this.zeroPrefix(sec, 2) +
+        " Seconds"
+      );
     },
     zeroPrefix(num, digit) {
       var zero = "";
@@ -142,8 +150,8 @@ export default {
     }
     if (this.clock.running) {
       this.clock.started = setInterval(this.clockRunning, 10);
-    }else{
-      this.stop();
+    } else {
+      this.clock.timeStopped = new Date(this.clock.timeStopped);
     }
   },
   created() {
