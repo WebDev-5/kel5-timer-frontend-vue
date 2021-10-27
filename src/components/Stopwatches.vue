@@ -14,6 +14,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
 
+.zen-font {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
 </style>
