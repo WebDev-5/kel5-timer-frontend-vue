@@ -57,6 +57,7 @@ export default {
     stop() {
       this.clock.running = false;
       this.clock.timeStopped = new Date();
+      console.log(this.clock.timeStopped);
       clearInterval(this.clock.started);
     },
     reset() {
@@ -73,6 +74,7 @@ export default {
         this.clock.last = "Total: 00 Hours 00 Minutes 00 Seconds";
         return;
       }
+      this.clock.timeBegan = new Date(this.clock.timeBegan);
       var currentTime = new Date();
       if (this.clock.timeStopped === null) {
         currentTime = new Date();
@@ -85,8 +87,6 @@ export default {
         hour = timeElapsed.getUTCHours(),
         min = timeElapsed.getUTCMinutes(),
         sec = timeElapsed.getUTCSeconds();
-      console.log(currentTime.getUTCHours());
-      console.log(hour);
       this.clock.last =
         "Total: " +
         this.zeroPrefix(hour, 2) +
@@ -97,6 +97,7 @@ export default {
         " Seconds";
     },
     clockRunning() {
+      this.clock.timeBegan = new Date(this.clock.timeBegan);
       var currentTime = new Date(),
         timeElapsed = new Date(
           currentTime - this.clock.timeBegan - this.clock.stoppedDuration
@@ -121,12 +122,34 @@ export default {
       }
       return (zero + num).slice(-digit);
     },
-  },
-  created() {
-    localStorage.setItem("stopwatch", JSON.stringify(this.clock));
+    saveClock() {
+      localStorage.setItem("clock", JSON.stringify(this.clock));
+    },
   },
   mounted() {
-    this.clock = JSON.parse(localStorage.getItem("stopwatch"));
+    if (localStorage.getItem("clock")) {
+      this.clock = JSON.parse(localStorage.getItem("clock"));
+    } else {
+      this.clock = {
+        timeBegan: null,
+        timeStopped: null,
+        stoppedDuration: 0,
+        started: false,
+        running: false,
+        jam: "00:00:00.000",
+        last: "Total: 00 Hours 00 Minutes 00 Seconds",
+      };
+    }
+    if (this.clock.running) {
+      this.clock.started = setInterval(this.clockRunning, 10);
+    }else{
+      this.stop();
+    }
+  },
+  created() {
+    window.addEventListener("beforeunload", () => {
+      this.saveClock();
+    });
   },
 };
 </script>
