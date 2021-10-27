@@ -1,23 +1,17 @@
 <template>
-  <div class="container-stopwatch">
-    <div class="stopwatch-body">
-      <div class="stopwatch-header">
-        <h3 id="title">Stopwatch</h3>
-        <button id="remove" type="button">X</button>
-      </div>
-      <br />
-      <br />
-      <h1 class="text-center tech-font">{{ clock.jam }}</h1>
-      <h3 class="total_jam">{{ clock.last }}</h3>
-      <div class="stopwatch-footer">
-        <button class="the_btn" type="button" v-on:click="start()">
-          Start
-        </button>
-        <button class="the_btn" type="button" v-on:click="stop()">Stop</button>
-        <button class="the_btn" type="button" v-on:click="reset()">
-          Reset
-        </button>
-      </div>
+  <div class="stopwatch-body">
+    <div class="stopwatch-header">
+      <h3 id="title">{{ title }}</h3>
+      <button @click="onDelete()" id="remove" type="button">X</button>
+    </div>
+    <br />
+    <br />
+    <h1 class="text-center tech-font">{{ jam }}</h1>
+    <h3 class="total_jam">{{ last }}</h3>
+    <div class="stopwatch-footer">
+      <button @click="start()" class="the_btn" type="button">Start</button>
+      <button @click="stop()" class="the_btn" type="button">Stop</button>
+      <button @click="reset()" class="the_btn" type="button">Reset</button>
     </div>
   </div>
 </template>
@@ -25,140 +19,31 @@
 <script>
 export default {
   name: "Stopwatch",
-  data() {
-    return {
-      clock: {
-        timeBegan: null,
-        timeStopped: null,
-        stoppedDuration: 0,
-        started: false,
-        running: false,
-        jam: "00:00:00.000",
-        last: "Total: 00 Hours 00 Minutes 00 Seconds",
-      },
-    };
+  props: {
+    id: Number,
+    title: String,
+    timeBegan: Date,
+    timeStopped: Date,
+    stoppedDuration: Number,
+    started: Number,
+    running: Boolean,
+    jam: String,
+    last: String,
   },
   methods: {
-    start() {
-      if (this.clock.running) return;
-
-      if (this.clock.timeBegan === null) {
-        this.reset();
-        this.clock.timeBegan = new Date();
-      }
-
-      if (this.clock.timeStopped !== null) {
-        this.clock.stoppedDuration += new Date() - this.clock.timeStopped;
-      }
-
-      this.clock.started = setInterval(this.clockRunning, 10);
-      this.clock.running = true;
+    onDelete() {
+      this.$emit("delete");
     },
-    stop() {
-      this.clock.running = false;
-      this.clock.timeStopped = new Date();
-      console.log(this.clock.timeStopped);
-      clearInterval(this.clock.started);
+    start(){
+      this.$emit("start")
     },
-    reset() {
-      this.last();
-      this.clock.running = false;
-      clearInterval(this.clock.started);
-      this.clock.stoppedDuration = 0;
-      this.clock.timeBegan = null;
-      this.clock.timeStopped = null;
-      this.clock.jam = "00:00:00.000";
+    stop(){
+      this.$emit("stop");
     },
-    last() {
-      if (this.clock.timeBegan === null) {
-        this.clock.last = "Total: 00 Hours 00 Minutes 00 Seconds";
-        return;
-      }
-      this.clock.timeBegan = new Date(this.clock.timeBegan);
-      var currentTime = new Date();
-      if (this.clock.running) {
-        currentTime = new Date();
-      } else {
-        currentTime = new Date(this.clock.timeStopped);
-      }
-      var timeElapsed = new Date(
-          currentTime - this.clock.timeBegan - this.clock.stoppedDuration
-        ),
-        hour = timeElapsed.getUTCHours(),
-        min = timeElapsed.getUTCMinutes(),
-        sec = timeElapsed.getUTCSeconds();
-      this.clock.last = "Total: "+
-        this.zeroPrefix(hour, 2) +
-        " Hours " +
-        this.zeroPrefix(min, 2) +
-        " Minutes " +
-        this.zeroPrefix(sec, 2) +
-        " Seconds ";
-    },
-    clockRunning() {
-      this.clock.timeBegan = new Date(this.clock.timeBegan);
-      var currentTime = new Date(),
-        timeElapsed = new Date(
-          currentTime - this.clock.timeBegan - this.clock.stoppedDuration
-        ),
-        hour = timeElapsed.getUTCHours(),
-        min = timeElapsed.getUTCMinutes(),
-        sec = timeElapsed.getUTCSeconds(),
-        ms = timeElapsed.getUTCMilliseconds();
-      this.clock.jam =
-        this.zeroPrefix(hour, 2) +
-        ":" +
-        this.zeroPrefix(min, 2) +
-        ":" +
-        this.zeroPrefix(sec, 2) +
-        "." +
-        this.zeroPrefix(ms, 3);
-      return (
-        "Total: " +
-        this.zeroPrefix(hour, 2) +
-        " Hours " +
-        this.zeroPrefix(min, 2) +
-        " Minutes " +
-        this.zeroPrefix(sec, 2) +
-        " Seconds"
-      );
-    },
-    zeroPrefix(num, digit) {
-      var zero = "";
-      for (var i = 0; i < digit; i++) {
-        zero += "0";
-      }
-      return (zero + num).slice(-digit);
-    },
-    saveClock() {
-      localStorage.setItem("clock", JSON.stringify(this.clock));
-    },
-  },
-  mounted() {
-    if (localStorage.getItem("clock")) {
-      this.clock = JSON.parse(localStorage.getItem("clock"));
-    } else {
-      this.clock = {
-        timeBegan: null,
-        timeStopped: null,
-        stoppedDuration: 0,
-        started: false,
-        running: false,
-        jam: "00:00:00.000",
-        last: "Total: 00 Hours 00 Minutes 00 Seconds",
-      };
+    reset(){
+      this.$emit("reset");
     }
-    if (this.clock.running) {
-      this.clock.started = setInterval(this.clockRunning, 10);
-    } else {
-      this.clock.timeStopped = new Date(this.clock.timeStopped);
-    }
-  },
-  created() {
-    window.addEventListener("beforeunload", () => {
-      this.saveClock();
-    });
-  },
+  },  
 };
 </script>
 
