@@ -6,7 +6,7 @@
     </div>
     <br />
     <br />
-    <h1 class="text-center tech-font">{{ jam }}</h1>
+    <h1 class="text-center tech-font timer">{{ jam }}</h1>
     <h3 class="total_jam">{{ last }}</h3>
     <div class="stopwatch-footer">
       <button @click="start()" class="the_btn" type="button">Start</button>
@@ -56,6 +56,10 @@ export default {
 
 .text-center {
   text-align: center;
+}
+
+.timer {
+  font-size: 30px;
 }
 
 .container-stopwatch {
@@ -124,7 +128,7 @@ export default {
 
 .the_btn {
   float: left;
-  background: #444444;
+  background: #155799;
   width: 33%;
 }
 

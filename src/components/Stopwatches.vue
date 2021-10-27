@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar text-center">
     <input v-model="title" placeholder="Add Your Task" />
     <button
       id="button-add"
@@ -10,7 +10,7 @@
       NEW
     </button>
     <button
-      id="button-add"
+      id="delete-all"
       type="button"
       class="zen-font thick-font"
       @click="deleteall"
@@ -18,7 +18,6 @@
       DELETE ALL
     </button>
   </div>
-  <hr />
   <div class="zen-font">
     <div class="container-stopwatch">
       <Stopwatch
@@ -234,7 +233,43 @@ export default {
 }
 
 .navbar {
-  padding-bottom: 1%;
+  position: relative;
+  padding-bottom: 7%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  color: white;
+  border-bottom: 1px solid #eee;
+}
+
+input{
+  float: left;
+  width: 60%;
+  color: white;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  color: white;
+  border: 4px solid white;
+  background: none;
+  transition: 0.5s;
+}
+
+input::placeholder{
+  width: 55%;
+}
+
+input:focus{
+  border: 4px solid #155799;
+  color: white;
+}
+
+input:focus::placeholder{
+  color: white;
 }
 
 .thick-font {
@@ -242,7 +277,7 @@ export default {
 }
 
 button[type="button"] {
-  color: black;
+  color: white;
   padding: 12px 20px;
   padding-left: -50px;
   cursor: pointer;
@@ -253,16 +288,50 @@ button[type="button"] {
   transition: 0.5s;
 }
 
+#button-add {
+  float: left;
+  color: white;
+  padding: 12px 20px;
+  padding-left: -50px;
+  text-decoration: none;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 24px;
+  border: 4px solid #155799;
+  background: #155799;
+  transition: 0.5s;
+}
+
+#button-add:hover{
+  background: white;
+  border: 4px solid white;
+  color: #155799;
+}
+
 button[type="button"]:hover {
   background-color: #da0037;
   color: white;
 }
 
-#button-add {
-  font-size: 15px;
-  background: #da0037;
-  margin: 0 auto;
-  text-align: center;
-  color: #ffffff;
+#delete-all {
+  float: left;
+  color: white;
+  font-size: inherit;
+  background-color: #da0037;
+  padding: 12px 20px;
+  padding-left: -50px;
+  text-decoration: none;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 24px;
+  border: 4px solid #da0037;
+  transition: 0.5s;
 }
+
+#delete-all:hover{
+  background: white;
+  border: 4px solid white;
+  color: #d9534f;
+}
+
 </style>
