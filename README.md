@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue">
-    <img src="./src/assets/images/icon.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Multi Stopwatch Kelompok 5</h3>
@@ -34,10 +34,10 @@
   <p align="center">
     An awesome Stopwatch to manage your time!
     <br />
-    <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue"><strong>Open Application »</strong></a>
+    <a href="#installation"><strong>Open Application »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue">View Demo</a>
+    <a href="#usage">View Demo</a>
     ·
     <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue/issues">Report Bug</a>
     ·
@@ -80,7 +80,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 Multi Stopwatch is an application that was built to fulfill a mini project assignment for Web Development course, which was developed by Webdev Kelompok 5 D4 2019 Politeknik Negeri Bandung.
-This an application that is a simulation of a stopwatch or timer, which can be used to calculate and set the time for each activity you do. This application is built using HTML, CSS, Node.js, express.js, Sequelize, Axios, and PostgreSQL. 
+This an application that is a simulation of a stopwatch or timer, which can be used to calculate and set the time for each activity you do. This application is built using HTML, CSS, Node.js, Express.js, Sequelize, Axios, Vue.js, and PostgreSQL. This repository is BackEnd part from main project at https://github.com/WebDev-5/kel5-timer-frontend-vue. So, this part is just built using Node.js, Express.js, Sequelize, and PostgreSQL.
 Still remember, take advantage and don't waste your time!
 
 The following are the features of this application :
@@ -98,12 +98,9 @@ The following are the features of this application :
 
 The following are the frameworks and libraries that build this application :
 
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Node.js](https://nodejs.org/)
 * [Express.js](https://expressjs.com/)
 * [Sequelize](https://sequelize.org/)
-* [Axios](https://axios-http.com/docs/intro)
 * [PostgreSQL](https://www.postgresql.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -118,30 +115,21 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Install [kel5-timer-backend-nodeJS]
-2. Install `vue-cli` globally
+1. Clone the repository.
    ```sh
-   npm install vue-cli -g
+   git clone https://github.com/WebDev-5/kkel5-timer-backend-nodeJS
    ```
-3. Clone the repository
+2. Create a new role in Postgre, set name and password as `webdev-5`.
+3. Create a new database `timer` in Postgre and set the owner to `webdev-5`.
+4. Open terminal and install the dependencies.
    ```sh
-   git clone https://github.com/WebDev-5/kel5-timer-frontend-vue
+   npm install express sequelize pg pg-hstore body-parser cors --save
    ```
-4. Create a new database 'timer' in Postgre with `webdev-5` as `db_user` and `db_password`.
-5. Open terminal and change directory to root folder
+5. Run server.
    ```sh
-   cd kel5-timer-frontend-vue
+   node server.js
    ```
-6. Install the dependencies.
-   ```sh
-   npm install
-   ```
-7. Run server 
-   ```sh
-   npm run serve
-   ```
-8. Go to the link where the app is running e.g. `http://localhost:8080/`.
-9. Run application.
+6. Visit FrontEnd repository of this project at https://github.com/WebDev-5/kel5-timer-frontend-vue and then folllow the instructions of installation to run application.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -161,7 +149,7 @@ To use this application, you can :
 
 For example :
 
-[![Watch the video](./src/assets/video/demo.gif)](https://github.com/WebDev-5/kel5-timer-frontend-vue)
+[![Watch the video](assets/video/demo.gif)](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -226,7 +214,8 @@ Distributed under the MIT License. See [LICENSE.md](https://github.com/WebDev-5/
 * [Nabil Putra Hadiyani](https://github.com/nabilputrah)
 * [Shinta Nurkaafi](https://github.com/NurMeiTaa)
 
-Project Link: [Multiple Stopwatch Kelompok 5](https://github.com/WebDev-5/kel5-timer-frontend-vue)
+1. Project Link (BackEnd) : [Multiple Stopwatch Kelompok 5 (BackEnd)](https://github.com/WebDev-5/kel5-timer-backend-nodeJS)
+2. Project Link (FrontEnd) : [Multiple Stopwatch Kelompok 5 (FrontEnd)](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -240,7 +229,6 @@ We've included a few of our favorites to kick things off!
 * [Img Shields](https://shields.io)
 * [Readme Template](https://github.com/othneildrew/Best-README-Template)
 * [Example CRUD Rest APIs](https://www.bezkoder.com/node-express-sequelize-postgresql/)
-* [Axios Example](https://github.com/axios/axios)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -250,13 +238,12 @@ We've included a few of our favorites to kick things off!
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/CONTRIBUTORS-6-blue?style=for-the-badge&logo=appveyor
 [contributors-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
+[forks-shield]: https://img.shields.io/github/forks/WebDev-5/kel5-timer-frontend-vue?style=for-the-badge&logo=appveyor
 [forks-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/network/members
-[stars-shield]: https://img.shields.io/github/stars/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
+[stars-shield]: https://img.shields.io/github/stars/WebDev-5/kel5-timer-frontend-vue?style=for-the-badge&logo=appveyor
 [stars-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/stargazers
-[issues-shield]: https://img.shields.io/github/issues/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
+[issues-shield]: https://img.shields.io/github/issues/WebDev-5/kel5-timer-frontend-vue?style=for-the-badge&logo=appveyor
 [issues-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/issues
-[license-shield]: https://img.shields.io/github/license/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
+[license-shield]: https://img.shields.io/github/license/WebDev-5/kel5-timer-frontend-vue?style=for-the-badge&logo=appveyor
 [license-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/blob/main/LICENSE.md
-[product-screenshot]: src/assets/images/screenshot.png
-[kel5-timer-backend-nodeJS]: https://github.com/WebDev-5/kel5-timer-backend-nodeJS
+[product-screenshot]: assets/images/screenshot.png
