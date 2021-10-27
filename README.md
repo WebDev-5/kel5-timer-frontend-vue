@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/WebDev-5/kel5-timer-frontend-vue">
-    <img src="./src/assets/icon.png" alt="Logo" width="80" height="80">
+    <img src="./src/assets/images/icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Multi Stopwatch Kelompok 5</h3>
@@ -160,7 +160,7 @@ To use this application, you can :
 
 For example :
 
-[![Watch the video](./src/assets/demo.gif)](https://github.com/WebDev-5/kel5-timer-frontend-vue)
+[![Watch the video](./src/assets/video/demo.gif)](https://github.com/WebDev-5/kel5-timer-frontend-vue)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -257,4 +257,4 @@ We've included a few of our favorites to kick things off!
 [issues-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/issues
 [license-shield]: https://img.shields.io/github/license/WebDev-5/kel5-timer-jQuery?style=for-the-badge&logo=appveyor
 [license-url]: https://github.com/WebDev-5/kel5-timer-frontend-vue/blob/main/LICENSE.md
-[product-screenshot]: ./src/assets/screenshot.png
+[product-screenshot]: src/assets/images/screenshot.png
