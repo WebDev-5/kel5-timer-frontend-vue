@@ -1,5 +1,5 @@
 <template>
-  <h1 class="page-header text-center">MULTIPLE STOPWATCH</h1>
+  <h1 class="page-header text-center zen-font">MULTIPLE STOPWATCH</h1>
 </template>
 
 <script>
@@ -8,6 +8,15 @@ export default {
 };
 </script>
 
-<style scoped>
-@import '../assets/style.css';
+<style>
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: normal
+}
+
+.text-center {
+    text-align: center;
+}
 </style>
