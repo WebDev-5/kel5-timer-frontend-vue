@@ -75,7 +75,7 @@ export default {
         return;
       }
       this.clock.timeBegan = new Date(this.clock.timeBegan);
-      var currentTime = new Date();
+      var currentTime=new Date();
       if (this.clock.timeStopped === null) {
         currentTime = new Date();
       } else {
