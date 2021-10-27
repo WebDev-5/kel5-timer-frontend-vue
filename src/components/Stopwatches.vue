@@ -20,6 +20,11 @@ export default {
     components: {
         Stopwatch,
     },
+    data() {
+        return {
+            stopwatches: [],
+        }
+    },
 };
 </script>
 
