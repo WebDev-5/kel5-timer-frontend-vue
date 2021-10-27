@@ -72,8 +72,13 @@ export default {
             this.clock.last = "Total: 00 Hours 00 Minutes 00 Seconds";
             return;
         }
-      var currentTime = new Date(),
-        timeElapsed = new Date(
+        var currentTime = new Date();
+        if(this.clock.timeStopped === null) {
+            currentTime = new Date();
+        }else{
+            currentTime = this.clock.timeStopped;
+        }
+        var timeElapsed = new Date(
           currentTime - this.clock.timeBegan - this.clock.stoppedDuration
         ),
         hour = timeElapsed.getUTCHours(),
