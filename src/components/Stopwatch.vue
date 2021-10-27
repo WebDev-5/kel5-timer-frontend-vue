@@ -9,9 +9,6 @@
       <br />
       <h1 class="text-center tech-font">{{ clock.jam }}</h1>
       <h3 class="total_jam">{{ clock.last }}</h3>
-      <!-- <div class="stopwatch-time">
-            <h1 id="jam">00:00:00</h1>
-        </div> -->
       <div class="stopwatch-footer">
         <button class="the_btn" type="button" v-on:click="start()">
           Start
