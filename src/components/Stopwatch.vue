@@ -96,11 +96,16 @@ export default {
 }
 
 #remove {
-  /* background-color: aqua; */
+  background-color: #121212;
   margin-top: 10px;
   float: right;
+  border: 4px solid   white;
   /* width: 40%; */
   /* color: white; */
+}
+
+#remove:hover {
+  background-color: white;
 }
 
 .stopwatch-time {
@@ -116,9 +121,9 @@ export default {
 .stopwatch-footer {
   float: left;
   width: 100%;
-  border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  margin-bottom: 20px;
 }
 
 #start_btn:hover {

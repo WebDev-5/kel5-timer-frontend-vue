@@ -71,6 +71,7 @@ export default {
         jam: "00:00:00.000",
         last: "Total: 00 Hours 00 Minutes 00 Seconds",
       });
+      this.title = "";
     },
     deleteStopwatch(index) {
       this.stopwatches.splice(index, 1);
@@ -234,10 +235,10 @@ export default {
 
 .navbar {
   position: relative;
-  padding-bottom: 7%;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
+  margin: auto;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
   color: white;
   border-bottom: 1px solid #eee;
 }
@@ -264,7 +265,7 @@ input::placeholder{
 }
 
 input:focus{
-  border: 4px solid #155799;
+  border: 4px solid #ffffff;
   color: white;
 }
 
@@ -288,6 +289,8 @@ button[type="button"] {
   transition: 0.5s;
 }
 
+
+
 #button-add {
   float: left;
   color: white;
@@ -297,20 +300,20 @@ button[type="button"] {
   margin: 8px 0;
   cursor: pointer;
   border-radius: 24px;
-  border: 4px solid #155799;
-  background: #155799;
+  border: 4px solid white;
+  background: black;
   transition: 0.5s;
 }
 
 #button-add:hover{
   background: white;
   border: 4px solid white;
-  color: #155799;
+  color: black;
 }
 
 button[type="button"]:hover {
-  background-color: #da0037;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 #delete-all {
