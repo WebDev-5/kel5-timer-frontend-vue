@@ -127,7 +127,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 4. Open terminal and change directory to root folder.
     ```sh
-   cd ../kel5-timer-frontend-vue
+   cd kel5-timer-frontend-vue
    ```
 5. Install the dependencies.
    ```sh
