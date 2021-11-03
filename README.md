@@ -116,7 +116,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Visit FrontEnd repository of this project at https://github.com/WebDev-5/kel5-timer-backend-nodeJS and then folllow the instructions of installation.
+1. Visit BackEnd repository of this project at https://github.com/WebDev-5/kel5-timer-backend-nodeJS and then folllow the instructions of installation.
 2. Open terminal and install `vue-cli` globally.
     ```sh
    npm install vue-cli -g
@@ -135,9 +135,9 @@ To get a local copy up and running follow these simple example steps.
    ```
 6. Run server.
    ```sh
-   node run serve
+   npm run serve -- --port 8081
    ```
-7. Open your browsser and visit `http://localhost:8080`.
+7. Open your browsser and visit `http://localhost:8081`.
 8. Run application.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
